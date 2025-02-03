@@ -80,9 +80,6 @@ split = int(len(shuffled_data) * train_config.train_ratio)
 train_data = shuffled_data[:split]
 val_data = shuffled_data[split:]
 
-train_data = train_data[:2000]
-val_data = val_data[:500]
-
 
 # 5. Create datasets and collators.
 train_dataset = ClinicalDataset(train_data)
