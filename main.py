@@ -22,7 +22,7 @@ import mlflow.pytorch
 train_config = TrainConfig(
     experiment_name="clinical_transformer",  # MLFlow experiment name
     run_name="default_run6",                  # MLFlow run name
-    resume_run_id="0a56b03a46fd4b30b661338e5ff4ea10",  # Set to a run_id to resume training, or None
+    resume_run_id=None,                       # Set to a run_id to resume training, or None
     max_epochs=200,                           # Maximum number of epochs
     patience=10,                              # Patience for early stopping
     learning_rate=1e-3,                      # Learning rate
@@ -79,6 +79,10 @@ random.shuffle(shuffled_data)
 split = int(len(shuffled_data) * train_config.train_ratio)
 train_data = shuffled_data[:split]
 val_data = shuffled_data[split:]
+
+# Limit the number of samples for experimenting
+#train_data = train_data[:2000]
+#val_data = val_data[:500]
 
 
 # 5. Create datasets and collators.
