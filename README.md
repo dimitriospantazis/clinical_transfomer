@@ -19,6 +19,11 @@ If you use this model in your work, please cite the article as:
 
 ---
 
+## Clinical Transformer Architecture
+
+![Alt Text](clinical_transformer.jpg)
+
+
 ## Overview
 
 The **Clinical Transformer** is designed to process clinical data by handling sequences of feature name and feature value pairs. These features can be **categorical** (e.g., `"SEX"`, `"CANCER_TYPE"`) or **numerical** (e.g., `"AGE_AT_SEQ_REPORT"`). This implementation includes a custom tokenizer, collator, and embedder to support the Clinical Transformer. Here are some modifications compared to the original article:
