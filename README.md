@@ -70,7 +70,8 @@ A single data point (e.g. patient) is represented as a list of feature pairs. Fo
     ["SEX", "Female"],
     ["AGE_AT_SEQ_REPORT", 55],
     ["CANCER_TYPE", "Breast Cancer"],
-    ["GENE", "BCL2A1"],
+    ["BRCA2", "Missense_Mutation"],
+    ['CDKN2A_CNA', '-1'],
     # ... additional features
 ]
 ```
